@@ -9,8 +9,8 @@ OOPs:
 	Polymorphism - One task but it can be done in different ways.. Basically we perform method overloading and overridding
 					Overloading means the two different method with same name is there in same class
 					Overriding means same method name with same number of parameters but different class
-	Abstraction
-	Encapsulation
+	Abstraction	- Hiding internal details/showing functionality of a class - Through Interface and abstract classes you can achieve abstraction
+	Encapsulation - Binding or wrapping up the code or data
 
 
 Types of Classes
@@ -24,6 +24,13 @@ Singleton Class
 POJO Class
 Inner Class
 
+Static and public
+public - Allows the method to be used in another class
+private - Allows the method to be used in same class only and not in another class
+
+static - memory management. Static method or class it can be used in the same object of that class
+		 static method and variables are there
+		 In simple terms, static variable and method are there for a class and not just for an object/instance.
 
 
 Types of Classes in Java
@@ -32,11 +39,12 @@ In Java, static is a keyword that manage objects in the memory. The static objec
 
 We can make a class static if and only if it is a nested class. We can also say that static classes are known as nested classes. It means that a class that is declared as static within another class is known as a static class. Nested static class does not require reference to the outer class. The purpose of a static class is to provide the outline of its inherited class.
 
+Static classes are used when you want to use the static variable of an upper class
 The properties of the static class are:
 
 The class has only static members.
 It cannot access the member (non-static) of the outer class.
-We cannot create an object of the static class.
+We cannot create an object of the static class without the outer class mention.
 Let's understand the concept of static class through a program.
 
 ####################################################################
@@ -81,31 +89,29 @@ Let's understand the concept of the final class through a program.
 FinalClassExample.java
 
 //base class declared as final  
-final class A  
-{  
-void printmsg()   
-{  
-System.out.print("Base class method is executed.");  
-}  
+final class A  {  
+	void printmsg()   
+	{  
+		System.out.print("Base class method is executed.");  
+	}  
 }  
 //derived class  
 //extending a final class which is not possible   
 //it shows the error cannot inherit final class at compile time   
-class B extends A  
-{   
+class B extends A  {   
 void printmsg()   
-{  
-System.out.print("Derived class method is executed.");  
-}  
+	{  
+		System.out.print("Derived class method is executed.");  
+	}  
 }  
 //main class  
 public class FinalClassExample  
 {  
-public static void main(String[] arg)   
-{  
-B obj = new B();  
-obj.printmsg();  
-}  
+	public static void main(String[] arg)   
+	{  
+		B obj = new B();  
+		obj.printmsg();  
+	}  
 }  
 Output:
 

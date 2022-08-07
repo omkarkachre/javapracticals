@@ -1,0 +1,203 @@
+You can create a class and have multiple objects of that class
+
+what is OOPS and why we use it?
+
+OOPs:
+	Object - Entity of a class
+	Class  - Collection of object
+	Inheritance - Inherit the parent class into one class using extend keyword
+	Polymorphism - One task but it can be done in different ways.. Basically we perform method overloading and overridding
+					Overloading means the two different method with same name is there in same class
+					Overriding means same method name with same number of parameters but different class
+	Abstraction
+	Encapsulation
+
+
+Types of Classes
+There are seven types of classes in Java:
+
+Static Class
+Final Class
+Abstract Class
+Concrete Class
+Singleton Class
+POJO Class
+Inner Class
+
+
+
+Types of Classes in Java
+Static Class
+In Java, static is a keyword that manage objects in the memory. The static object belongs to the class instead of the instance of the class.
+
+We can make a class static if and only if it is a nested class. We can also say that static classes are known as nested classes. It means that a class that is declared as static within another class is known as a static class. Nested static class does not require reference to the outer class. The purpose of a static class is to provide the outline of its inherited class.
+
+The properties of the static class are:
+
+The class has only static members.
+It cannot access the member (non-static) of the outer class.
+We cannot create an object of the static class.
+Let's understand the concept of static class through a program.
+
+####################################################################
+StaticClassExample.java
+
+public class StaticClassExample  
+{  
+private static String str = "Javatpoint";  
+//nested class which is a Static class  
+public static class StaticDemo  
+{  
+//non-static method of Static class  
+public void show()   
+{  
+System.out.println(str);   
+}  
+}  
+public static void main(String args[])  
+{  
+StaticClassExample.StaticDemo obj = new StaticClassExample.StaticDemo();  
+obj.show();  
+}  
+}  
+Output:
+
+Javatpoint
+
+####################################################################
+
+In the outer class of the above program, we have declared a variable str as static because we are accessing that variable from a static context. If we declare that variable as non-static, the compiler shows an error because a nested static class cannot access non-static members of the outer class.
+
+The second thing to be noticed in the above program is that for creating the object of the nested class we need not to create an instance of the outer class. If the nested class is not a static class, we need to create an instance of the outer class.
+
+
+
+
+Final Class
+The word final means that cannot be changed. The final class in Java can be declared using the final keyword. Once we declare a class as final, the values remain the same throughout the program. The purpose of the final class is to make the class immutable like the String class. It is only a way to make the class immutable. Remember that the final class cannot be extended. It also prevents the class from being sub-classed.
+
+Let's understand the concept of the final class through a program.
+####################################################################
+FinalClassExample.java
+
+//base class declared as final  
+final class A  
+{  
+void printmsg()   
+{  
+System.out.print("Base class method is executed.");  
+}  
+}  
+//derived class  
+//extending a final class which is not possible   
+//it shows the error cannot inherit final class at compile time   
+class B extends A  
+{   
+void printmsg()   
+{  
+System.out.print("Derived class method is executed.");  
+}  
+}  
+//main class  
+public class FinalClassExample  
+{  
+public static void main(String[] arg)   
+{  
+B obj = new B();  
+obj.printmsg();  
+}  
+}  
+Output:
+
+/FinalClassExample.java:11: error: cannot inherit from final A class B extends A
+
+####################################################################
+
+Abstract Class
+An abstract class is a that is declared with the keyword abstract. The class may or may not contain abstract methods. We cannot create an instance of an abstract class but it can be a subclass. These classes are incomplete, so to complete the abstract class we should extend the abstract classes to a concrete class. When we declare a subclass as abstract then it is necessary to provide the implementation of abstract methods. Therefore, the subclass must also be declared abstract. We can achieve data hiding by using the abstract class. An example of an abstract class is AbstarctMap class that is a part of the Collections framework.
+
+Let's understand the concept of abstract class through a program.
+
+####################################################################
+AbstractClassExample.java
+
+//abstract class  
+abstract class MathematicalOperations   
+{   
+int a=30, b=40;  
+//abstract method  
+public abstract void add();   
+}  
+public class Operation extends MathematicalOperations    
+{   
+//definition of abstract method       
+public void add()   
+{  
+System.out.println("Sum of a and b is: "a+b);  
+}  
+public static void main(String args[])   
+{  
+MathematicalOperations obj = new Operation();  
+obj.add();  
+}  
+}  
+Output:
+
+Sum of a and b is: 70
+
+####################################################################
+
+
+Inner class
+Java allows us to define a class within a class and such classes are known as nested classes. It is used to group the classes logically and to achieve encapsulation. The outer class members (including private) can be accessed by the inner class. The general syntax for declaring the nested class is as follows:
+
+class OuterClass  
+{    
+//code    
+class NestedClass  
+{    
+//code    
+}    
+}  
+The nested classes are of two types:
+
+1. Static Nested class: A class that is static and nested is called a static nested class. It interacts with the instance member of its outer class. We can create an object of the static nested class by using the following syntax:
+
+OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();  
+2. Non-static Nested Class: Non-static nested classes are called inner classes.
+
+The general syntax for declaring the static nested class and inner class is as follows:
+
+class OuterClass   
+{  
+...  
+static class StaticNestedClass   
+{  
+...  
+}  
+class InnerClass   
+{  
+...  
+}  
+}  
+Let's understand the concept of inner class through a Java program.
+
+InnerClassExample.java
+
+public class InnerClassExample  
+{  
+public static void main(String[] args)   
+{  
+System.out.println("This is outer class.");  
+}  
+class InnerClass   
+{  
+public void printinner()   
+{  
+System.out.println("This is inner class.");  
+}  
+}  
+}
+
+
+

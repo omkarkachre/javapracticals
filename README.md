@@ -3,8 +3,10 @@
 
 Practicals Questions:
 
-Generate a factorial series 
+Generate a factorial series
+
 Generate a fibonacci series 
+
 Generate a pyramid of number 
 
           1

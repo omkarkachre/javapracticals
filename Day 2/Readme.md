@@ -1,2 +1,2 @@
 OOPS
-![plot](/home/lunatic/abstract.png)
+![Screenshot]

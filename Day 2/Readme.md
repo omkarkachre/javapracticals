@@ -88,6 +88,26 @@ Pillar of OOPS
 
 	A abstract class can have abstract method and non-abstract method
 
+	
+	Exercise:
+	
+	Human - Interface
+		Walk
+		Watch
+		Run
+		Dance
 
+	Male - Abstract Class
+		Inherit the Human interface
+
+		non abstract methods
+		Driving
+		Swimming 
+
+
+	Student - Class
+		Inherit the Male Class
+
+		Create the Object
 
 	

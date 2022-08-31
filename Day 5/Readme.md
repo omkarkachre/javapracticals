@@ -1,5 +1,6 @@
 Multi Threading
-
+Homework
+https://www.geeksforgeeks.org/how-to-find-prime-and-palindrome-numbers-using-multi-threading-in-java/
 
 A process does not execute/run
 Threads gets executed or it runs

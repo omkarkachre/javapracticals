@@ -38,7 +38,7 @@ Pillar of OOPS
 		super.a = 10;
 
 
-	Polymorphism - Same same of function but different parameter 
+	Polymorphism - Same name of function but different parameter 
 	How do we achieve?
 		By using overriding or overloading
 

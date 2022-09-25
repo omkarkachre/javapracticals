@@ -40,8 +40,15 @@ public class Calculator implements ActionListener{
 		ClearButton.addActionListener(this);
 		factorialButton.addActionListener(this);
 		
+		frame.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				System.exit(0);
+			}
+		});
 		
 	}
+	
+	
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
